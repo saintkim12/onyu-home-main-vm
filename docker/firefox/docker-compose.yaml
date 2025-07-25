@@ -4,7 +4,7 @@ services:
     image: jlesage/firefox
     container_name: firefox
     ports:
-      - "5800:5800"  # 웹 VNC 인터페이스
+      - "${FIREFOX_PORT}:5800"  # 웹 VNC 인터페이스
     volumes:
       - firefox_data:/config:rw
     environment:
