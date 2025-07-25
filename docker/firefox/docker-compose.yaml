@@ -1,0 +1,16 @@
+version: '3'
+services:
+  firefox:
+    image: jlesage/firefox
+    container_name: firefox
+    ports:
+      - "5800:5800"  # 웹 VNC 인터페이스
+    volumes:
+      - firefox_data:/config:rw
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
+    restart: unless-stopped
+
+volumes:
+  firefox_data:
