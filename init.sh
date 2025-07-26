@@ -26,7 +26,6 @@ else
   echo "📦 Repo exists, pulling latest..."
   cd "$GIT_REPO" && git pull && cd ..
 fi
-cp ./.env ./main-vm
 cd main-vm/docker
 
 echo "🚀 Starting all Docker services..."
@@ -34,7 +33,7 @@ echo "🚀 Starting all Docker services..."
 for dir in */ ; do
   if [ -f "$dir/docker-compose.yaml" ]; then
     echo "🟢 Launching $dir"
-    (cd "$dir" && docker-compose up -d)
+    (cd "$dir" && docker-compose --env-file /opt/setup/.env up -d)
   fi
 done
 

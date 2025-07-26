@@ -3,8 +3,6 @@ services:
   firefox:
     image: jlesage/firefox
     container_name: firefox
-    env_file:
-      - ../../.env
     ports:
       - "${FIREFOX_PORT}:5800"  # 웹 VNC 인터페이스
     volumes:

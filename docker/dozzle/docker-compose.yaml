@@ -3,8 +3,6 @@ services:
   dozzle:
     image: amir20/dozzle:latest
     container_name: dozzle
-    env_file:
-      - ../../.env
     ports:
       - "${DOZZLE_PORT}:8080"
     volumes:
