@@ -3,6 +3,8 @@ services:
   portainer:
     image: portainer/portainer-ce
     container_name: portainer
+    env_file:
+      - ../.env
     ports:
       - '${PORTAINER_PORT}:9000'
     environment:

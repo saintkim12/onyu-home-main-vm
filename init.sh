@@ -21,13 +21,13 @@ service docker start
 echo "📥 Cloning Git repository..."
 
 if [ ! -d "./$GIT_REPO" ]; then
-  git clone -b "$GIT_BRANCH" "$GIT_URL" /opt/setup
+  git clone -b "$GIT_BRANCH" "$GIT_URL" /opt/setup/main-vm
 else
   echo "📦 Repo exists, pulling latest..."
   cd "$GIT_REPO" && git pull && cd ..
 fi
-
-cd $GIT_REPO/docker
+cp ./.env ./main-vm
+cd main-vm/docker
 
 echo "🚀 Starting all Docker services..."
 

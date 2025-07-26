@@ -3,6 +3,8 @@ services:
   tailscale:
     image: tailscale/tailscale
     container_name: tailscale
+    env_file:
+      - ../.env
     network_mode: "host"
     cap_add:
       - NET_ADMIN
