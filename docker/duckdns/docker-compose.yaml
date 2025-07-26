@@ -4,7 +4,7 @@ services:
     image: lscr.io/linuxserver/duckdns
     container_name: duckdns
     env_file:
-      - ../.env
+      - ../../.env
     environment:
       - SUBDOMAINS=${DUCKDNS_DOMAIN}
       - TOKEN=${DUCKDNS_TOKEN}
