@@ -29,6 +29,7 @@ excluded_people:
 
 ## ID(s) of album or albums to display
 albums:
+  - "63b0d5ed-5a79-4564-b0ca-4a50433013fe"
   # - "ALBUM_ID"
 # display album videos
 album_video: false
@@ -62,8 +63,8 @@ theme: fade # which theme to use. fade or solid
 layout: single # which layout to use. single | splitview | splitview-landscape | portrait | landscape
 
 ## Sleep mode
-sleep_start: 2 # sleep mode start time
-sleep_end: 6 # sleep mode end time
+sleep_start: "2" # sleep mode start time
+sleep_end: "6" # sleep mode end time
 # sleep_dim_screen: false # dim screen when sleep mode is active (only works with Fully Kiosk Browser)
 sleep_icon: true
 
