@@ -17,7 +17,8 @@ services:
     #   file: hwaccel.transcoding.yml
     #   service: cpu # set to one of [nvenc, quicksync, rkmpp, vaapi, vaapi-wsl] for accelerated transcoding
     environment:
-      DB_HOSTNAME: immich-database
+      # https://github.com/immich-app/immich/issues/1145#issuecomment-2480078671
+      DB_HOSTNAME: "${IMMICH_DB_HOSTNAME}"
     volumes:
       # Do not edit the next line. If you want to change the media storage location on your system, edit the value of UPLOAD_LOCATION in the .env file
       - "${UPLOAD_LOCATION}:/usr/src/app/upload"
@@ -39,6 +40,9 @@ services:
     # extends: # uncomment this section for hardware acceleration - see https://immich.app/docs/features/ml-hardware-acceleration
     #   file: hwaccel.ml.yml
     #   service: cpu # set to one of [armnn, cuda, rocm, openvino, openvino-wsl, rknn] for accelerated inference - use the `-wsl` version for WSL2 where applicable
+    environment:
+      # https://github.com/immich-app/immich/issues/1145#issuecomment-2480078671
+      DB_HOSTNAME: "${IMMICH_DB_HOSTNAME}"
     volumes:
       - model-cache:/cache
     restart: always
@@ -48,6 +52,9 @@ services:
   redis:
     container_name: immich_redis
     image: docker.io/valkey/valkey:8-bookworm@sha256:facc1d2c3462975c34e10fccb167bfa92b0e0dbd992fc282c29a61c3243afb11
+    environment:
+      # https://github.com/immich-app/immich/issues/1145#issuecomment-2480078671
+      DB_HOSTNAME: "${IMMICH_DB_HOSTNAME}"
     healthcheck:
       test: redis-cli ping || exit 1
     restart: always
