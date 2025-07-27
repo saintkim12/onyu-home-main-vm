@@ -2,7 +2,7 @@
 
 ## Required settings - move these to ENV if you want to check in this file
 # immich_api_key: ""
-immich_url: "http://192.168.8.178:8200"
+# immich_url: ""
 
 ## Clock
 show_time: true
