@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+SKIP_SERVICES="duckdns"
+
 mkdir -p /opt/setup
 cd /opt/setup
 
@@ -16,7 +18,7 @@ cd /opt/setup
 #rc-update add docker boot
 #service docker start
 
-echo "📥 Cloning Git repository..."
+echo "📥 Pulling Git repository..."
 
 if [ ! -d "./main-vm" ]; then
   git pull origin "$GIT_BRANCH" "$GIT_URL" /opt/setup/main-vm
@@ -29,6 +31,10 @@ cd main-vm/docker
 echo "🚀 Starting all Docker services..."
 
 for dir in */ ; do
+  if echo "$SKIP_SERVICES" | grep -q "$dir"; then
+    echo "⏭️ Skipping $dir"
+    continue
+  fi
   if [ -f "$dir/docker-compose.yaml" ]; then
     echo "🟢 Launching $dir"
     (cd "$dir" && docker-compose --env-file /opt/setup/.env up -d)
