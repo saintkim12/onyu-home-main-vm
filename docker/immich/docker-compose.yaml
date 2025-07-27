@@ -79,9 +79,10 @@ services:
     image: ghcr.io/damongolding/immich-kiosk:latest
     container_name: immich_kiosk
     tty: true
-    environment:
-      KIOSK_IMMICH_API_KEY: '${IMMICH_KIOSK_IMMICH_API_KEY}'
-      KIOSK_IMMICH_URL: '${IMMICH_KIOSK_IMMICH_URL}'
+    env_file: stack.env
+    # environment:
+      # KIOSK_IMMICH_API_KEY: '${IMMICH_KIOSK_IMMICH_API_KEY}'
+      # KIOSK_IMMICH_URL: '${IMMICH_KIOSK_IMMICH_URL}'
     ports:
       - '${IMMICH_KIOSK_PORT}:3000'
     # volumes:
