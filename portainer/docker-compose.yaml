@@ -5,8 +5,8 @@ services:
     container_name: portainer
     ports:
       - '${PORTAINER_PORT}:9000'
-    environment:
-      - ADMIN_PASS=${PORTAINER_ADMIN_PASS}
+    # environment:
+      # - ADMIN_PASS=${PORTAINER_ADMIN_PASS}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
