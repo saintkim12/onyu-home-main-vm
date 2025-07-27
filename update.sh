@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-SKIP_SERVICES="duckdns"
+SKIP_SERVICES="duckdns/"
 
 mkdir -p /opt/setup
 cd /opt/setup

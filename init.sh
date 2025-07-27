@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-SKIP_SERVICES="duckdns"
+SKIP_SERVICES="duckdns/"
 
 # Git 저장소 clone
 # git clone https://github.com/saintkim12/onyu-home-main-vm.git /opt/setup
