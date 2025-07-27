@@ -24,7 +24,7 @@ services:
       - "${IMMICH_PORT}:2283"
     depends_on:
       - redis
-      - database
+      - immich-database
     restart: unless-stopped
     healthcheck:
       disable: false
