@@ -77,17 +77,17 @@ services:
 
   immich-kiosk:
     image: ghcr.io/damongolding/immich-kiosk:latest
-    container_name: immich-kiosk
+    container_name: immich_kiosk
     tty: true
     environment:
       LANG: 'ko_KR'
       TZ: 'Asia/Seoul'
-      # KIOSK_IMMICH_API_KEY: '${IMMICH_KIOSK_IMMICH_API_KEY}'
-      # KIOSK_IMMICH_URL: '${IMMICH_KIOSK_IMMICH_URL}'
+      KIOSK_IMMICH_API_KEY: '${IMMICH_KIOSK_IMMICH_API_KEY}'
+      KIOSK_IMMICH_URL: '${IMMICH_KIOSK_IMMICH_URL}'
     ports:
       - '${IMMICH_KIOSK_PORT}:3000'
-    volumes:
-      - ./config:/config
+    # volumes:
+      # - ./config:/config
       # - ./custom.css:/custom.css
       # - ./offline-assets:/offline-assets
     restart: always
