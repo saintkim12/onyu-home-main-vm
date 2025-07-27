@@ -82,12 +82,10 @@ services:
     environment:
       LANG: 'ko_KR'
       TZ: 'Asia/Seoul'
-      KIOSK_IMMICH_API_KEY: '${IMMICH_KIOSK_IMMICH_API_KEY}'
-      KIOSK_IMMICH_URL: '${IMMICH_KIOSK_IMMICH_URL}'
     ports:
       - '${IMMICH_KIOSK_PORT}:3000'
-    # volumes:
-      # - ./config:/config
+    volumes:
+      - ./config:/config
       # - ./custom.css:/custom.css
       # - ./offline-assets:/offline-assets
     restart: always

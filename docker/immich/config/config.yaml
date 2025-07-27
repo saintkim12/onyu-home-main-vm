@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/damongolding/immich-kiosk/main/config.schema.json
 
 ## Required settings - move these to ENV if you want to check in this file
-immich_api_key: ""
-immich_url: ""
+# immich_api_key: ""
+immich_url: "http://192.168.8.178:8200"
 
 ## Clock
-show_time: false
+show_time: true
 time_format: 24 # 12 or 24
-show_date: false
+show_date: true
 date_format: YYYY/MM/DD
 clock_source: client
 
@@ -22,29 +22,29 @@ show_archived: false # Allow assets marked as archived to be displayed.
 
 ## ID(s) of person or people to display
 people:
-  - "PERSON_ID"
+  # - "PERSON_ID"
 require_all_people: false # When true, only show images containing all specified people together
 excluded_people:
-  - "PERSON_ID"
+  # - "PERSON_ID"
 
 ## ID(s) of album or albums to display
 albums:
-  - "ALBUM_ID"
+  # - "ALBUM_ID"
 # display album videos
 album_video: false
 # Album IDs to exclude from being shown. Albums in this list will be filtered from
 # appearing in the frame even if they are included in the 'album' list.
 album_order: random # random | newest | oldest
 excluded_albums:
-  - "ALBUM_ID"
+  # - "ALBUM_ID"
 
 ## Date range or ranges to display
 dates:
-  - "YYYY-MM-DD_to_YYYY-MM-DD"
+  # - "YYYY-MM-DD_to_YYYY-MM-DD"
 
 ## Value(s) of tag(s) to display
 tags:
-  - "TAG_VALUE"
+  # - "TAG_VALUE"
 
 memories: false # show memories
 
@@ -62,8 +62,8 @@ theme: fade # which theme to use. fade or solid
 layout: single # which layout to use. single | splitview | splitview-landscape | portrait | landscape
 
 ## Sleep mode
-# sleep_start: 22 # sleep mode start time
-# sleep_end: 7 # sleep mode end time
+sleep_start: 2 # sleep mode start time
+sleep_end: 6 # sleep mode end time
 # sleep_dim_screen: false # dim screen when sleep mode is active (only works with Fully Kiosk Browser)
 sleep_icon: true
 
@@ -93,7 +93,7 @@ show_image_exif: false
 show_image_location: false
 show_image_qr: false
 hide_countries:
-  - "country to hide"
+  # - "country to hide"
 show_image_id: false
 show_more_info: true
 show_more_info_image_link: true
