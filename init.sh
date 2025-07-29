@@ -23,7 +23,7 @@ service docker start
 echo "📥 Cloning Git repository..."
 
 ### [2] Git 저장소 클론
-if [ ! -d "./main-vm" ]; then
+if [ ! -d "$MAIN_VM_DIR" ]; then
   git clone -b "$GIT_BRANCH" "$GIT_URL" MAIN_VM_DIR
 else
   echo "📦 Repo exists, pulling latest..."
