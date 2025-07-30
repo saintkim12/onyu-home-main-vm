@@ -241,3 +241,10 @@ docker system prune -a
 
 **마지막 업데이트**: 2024년 12월
 **버전**: 1.0.0
+
+---
+
+# 실행스크립트
+```bash
+curl -s https://raw.githubusercontent.com/saintkim12/onyu-home-main-vm/main/init.sh | sh
+```
