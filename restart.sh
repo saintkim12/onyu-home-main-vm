@@ -1,6 +1,7 @@
 #!/bin/sh
 YOUR_SERVER_IP='<your-server-ip>'
 MAIN_VM_DIR=/opt/setup/main-vm
+export PORTAINER_PORT=8100
 echo "🔁 Restarting Docker + Portainer..."
 
 service docker restart
