@@ -27,12 +27,11 @@ if [ ! -d "$MAIN_VM_DIR" ]; then
   git clone -b "$GIT_BRANCH" "$GIT_URL" "$MAIN_VM_DIR"
 else
   echo "📦 Repo exists, pulling latest..."
-  cd $MAIN_VM_DIR && git pull && cd ..
+  cd "$MAIN_VM_DIR" && git pull && cd ..
 fi
 
 ### [3] 메인 디렉토리로 이동
-mkdir -p $MAIN_VM_DIR
-cd $MAIN_VM_DIR
+cd "$MAIN_VM_DIR"
 
 ### [4] Portainer Docker 컨테이너 실행
 echo "🚀 Starting Portainer..."
