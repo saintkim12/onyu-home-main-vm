@@ -1,5 +1,5 @@
 
-apk add rclone fuse
+apk add rclone fuse3
 
 # rclone config
 cp rclone.conf.sample ~/.config/rclone/rclone.conf
