@@ -1,0 +1,10 @@
+# /etc/local.d/rclone.start
+#!/bin/sh
+rclone mount immich-s3:immich /mnt/immich-s3 \
+  --vfs-cache-mode=writes \
+  --allow-other \
+  --dir-cache-time=1000h \
+  --poll-interval=15s \
+  --umask=002 \
+  --buffer-size=0 \
+  --attr-timeout=1s &

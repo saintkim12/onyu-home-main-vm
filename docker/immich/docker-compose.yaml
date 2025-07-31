@@ -77,5 +77,4 @@ services:
 
 volumes:
   model-cache:
-  immich_upload:
   immich_db:
