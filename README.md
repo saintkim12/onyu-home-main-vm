@@ -34,6 +34,7 @@
 |--------|------|------|------|
 | **Tailscale** | - | VPN 서비스 (호스트 모드) | ✅ |
 | **DuckDNS** | - | 동적 DNS 업데이트 | ✅ |
+| **Authentik** | 8300 | 인증 프록시 서비스 (NPM 뒤에 위치) | 🆕 |
 
 ### 🔄 자동화
 | 서비스 | 포트 | 설명 | 상태 |
@@ -59,6 +60,7 @@
 | Dozzle | 8080 | 8400 | http://localhost:8400 |
 | Immich | 2283 | 8200 | http://localhost:8200 |
 | Immich Kiosk | 3000 | 8201 | http://localhost:8201 |
+| Authentik | 9000 | 8300 | http://localhost:8300 |
 
 ## 🚀 시작하기
 
