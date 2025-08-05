@@ -7,8 +7,8 @@ services:
     ports:
       - '${ADGUARD_PORT_HTTP:-3000}:3000'      # 웹 관리 인터페이스
       - '${ADGUARD_PORT_HTTPS:-3001}:3001'     # HTTPS 웹 관리 인터페이스
-      - '${ADGUARD_PORT_DNS:-53}:53/udp'       # DNS 서버 (UDP)
-      - '${ADGUARD_PORT_DNS_TCP:-53}:53/tcp'   # DNS 서버 (TCP)
+      - '"${ADGUARD_PORT_DNS:-53}":53/udp'       # DNS 서버 (UDP)
+      - '"${ADGUARD_PORT_DNS_TCP:-53}":53/tcp'   # DNS 서버 (TCP)
       - '${ADGUARD_PORT_DNS_OVER_TLS:-853}:853/tcp'  # DNS-over-TLS
       - '${ADGUARD_PORT_DNS_OVER_HTTPS:-443}:443/tcp' # DNS-over-HTTPS
     volumes:
