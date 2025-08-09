@@ -1,0 +1,15 @@
+---
+services:
+  audiforge:
+    container_name: audiforge
+    image: nirmata1/audiforge:latest
+    restart: unless-stopped
+    ports:
+      - '${AUDIFORGE_PORT:-8080}:8080'
+    volumes:
+      - audiforge_upload:/tmp/uploads
+      - audiforge_download:/tmp/downloads
+
+volumes:
+  audiforge_upload:
+  audiforge_download:
