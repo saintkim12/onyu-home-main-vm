@@ -1,0 +1,21 @@
+
+services:
+  stirling-pdf:
+    image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest-ultra-lite
+    ports:
+      - '${STIRLING_PDF_PORT}:8080'
+    volumes:
+      - stirling_pdf_training_data:/usr/share/tessdata # Required for extra OCR languages
+      - stirling_pdf_configs:/configs
+      - stirling_pdf_custom_files:/customFiles/
+      - stirling_pdf_logs:/logs/
+      - stirling_pdf_pipeline:/pipeline/
+    environment:
+      - DISABLE_ADDITIONAL_FEATURES=false
+      - LANGS=ko_KR
+volumes:
+  stirling_pdf_training_data:
+  stirling_pdf_configs:
+  stirling_pdf_custom_files:
+  stirling_pdf_logs:
+  stirling_pdf_pipeline:
