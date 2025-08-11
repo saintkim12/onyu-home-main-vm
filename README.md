@@ -29,6 +29,7 @@
 | **Immich** | 8200 | 사진/비디오 백업 서비스 | ✅ |
 | **Immich Kiosk** | 8201 | 디지털 액자 모드 | ✅ |
 | **Audiforge** | 8210 | PDF to MusicXML | ✅ |
+| **Retroassembly** | 8220 | Retro game | ✅ |
 
 ### 🌐 네트워크 & 보안
 | 서비스 | 포트 | 설명 | 상태 |

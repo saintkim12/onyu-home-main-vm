@@ -1,0 +1,12 @@
+services:
+  retroassembly:
+    image: arianrhodsandlot/retroassembly
+    container_name: retroassembly
+    ports:
+      - '${RETROASSEMBLY_PORT}:8000'
+    volumes: 
+      - retroassembly_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  retroassembly_data:
