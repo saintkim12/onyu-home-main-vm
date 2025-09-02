@@ -1,5 +1,5 @@
 services:
   dynu-updater:
-    image: longkeyy/dynu-updater:latest
+    image: longkeyy/dynu-updater
     container_name: dynu-updater
     restart: unless-stopped
