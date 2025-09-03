@@ -36,9 +36,11 @@
 | 서비스 | 포트 | 설명 | 상태 |
 |--------|------|------|------|
 | **Tailscale** | - | VPN 서비스 (호스트 모드) | ✅ |
-| **DuckDNS** | - | 동적 DNS 업데이트 | ✅ |
+| ~~**DuckDNS**~~ | - | 동적 DNS 업데이트 | ✅ |
 | **Authentik** | 8300 | 인증 프록시 서비스 (NPM 뒤에 위치) | ✅ |
-| **Adguard Home** | 8310 | 광고 차단 DNS | 🆕 |
+| **Adguard Home** | 8310 | 광고 차단 DNS | ✅ |
+| **Dynu Updater** | - | 동적 DNS 업데이트 | ✅ |
+| **PairDrop** | 8320 | 기기간 파일 공유 | 🆕 |
 
 ### 🔄 자동화
 | 서비스 | 포트 | 설명 | 상태 |
@@ -67,6 +69,8 @@
 | Audiforge | 8080 | 8210 | http://localhost:8210 |
 | Stirling-PDF | 8080 | 8230 | http://localhost:8230 |
 | Authentik | 9000 | 8300 | http://localhost:8300 |
+| Adguard Home | 3000 | 8310 | http://localhost:8310 |
+| PairDrop | 3000 | 8320 | http://localhost:8320 |
 
 ## 🚀 시작하기
 
