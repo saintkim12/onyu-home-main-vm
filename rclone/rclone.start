@@ -7,4 +7,17 @@ rclone mount immich-s3:immich /mnt/immich-s3 \
   --poll-interval=15s \
   --umask=002 \
   --buffer-size=0 \
-  --attr-timeout=1s &
+  --attr-timeout=1s \
+  --log-level INFO \
+  --log-file /var/log/rclone-immich.log &
+
+rclone mount pinchflat-s3:pinchflat /mnt/pinchflat-s3 \
+  --vfs-cache-mode=writes \
+  --allow-other \
+  --dir-cache-time=1000h \
+  --poll-interval=15s \
+  --umask=002 \
+  --buffer-size=0 \
+  --attr-timeout=1s \
+  --log-level INFO \
+  --log-file /var/log/rclone-pinchflat.log &

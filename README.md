@@ -29,8 +29,9 @@
 | **Immich** | 8200 | 사진/비디오 백업 서비스 | ✅ |
 | **Immich Kiosk** | 8201 | 디지털 액자 모드 | ✅ |
 | **Audiforge** | 8210 | PDF to MusicXML | ✅ |
-| **Stirling-PDF** | 8230 | PDF 도구 모음 | ✅ |
 | **Retroassembly** | 8220 | Retro game | ✅ |
+| **Stirling-PDF** | 8230 | PDF 도구 모음 | ✅ |
+| **PinchFlat** | 8240 | Youtube 영상 저장 | ✅ |
 
 ### 🌐 네트워크 & 보안
 | 서비스 | 포트 | 설명 | 상태 |
@@ -53,7 +54,7 @@
 | 범위 | 용도 | 서비스 예시 |
 |------|------|-------------|
 | `8100~8199` | 관리 도구 | Portainer (8100) |
-| `8200~8299` | 미디어/백업 | Immich (8200), Immich Kiosk (8201), Audiforge (8210), Stirling-PDF (8230) |
+| `8200~8299` | 미디어/백업 | Immich (8200), Immich Kiosk (8201), Audiforge (8210), Stirling-PDF (8230), PinchFlat(8240) |
 | `8300~8399` | 네트워크 도구 | (예약됨) |
 | `8400~8499` | 모니터링/로깅 | Dozzle (8400) |
 | `8500~8599` | 자동화/백업 | (예약됨) |
@@ -68,6 +69,7 @@
 | Immich Kiosk | 3000 | 8201 | http://localhost:8201 |
 | Audiforge | 8080 | 8210 | http://localhost:8210 |
 | Stirling-PDF | 8080 | 8230 | http://localhost:8230 |
+| PinchFlat | 8945 | 8240 | http://localhost:8240 |
 | Authentik | 9000 | 8300 | http://localhost:8300 |
 | Adguard Home | 3000 | 8310 | http://localhost:8310 |
 | PairDrop | 3000 | 8320 | http://localhost:8320 |
