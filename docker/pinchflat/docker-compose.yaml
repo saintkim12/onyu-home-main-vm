@@ -5,7 +5,7 @@ services:
       - '${PINCHFLAT_PORT:-8945}:8945'
     volumes:
       - pinchflat_config:/config
-      - '${UPLOAD_LOCATION:-./downloads}:/downloads
+      - '${UPLOAD_LOCATION}:/downloads
     restart: unless-stopped
 
 volumes:
